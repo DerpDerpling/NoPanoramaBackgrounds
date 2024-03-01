@@ -1,41 +1,33 @@
 {
 	"schemaVersion": 1,
-	"id": "nbb",
+	"id": "nbp",
 	"version": "${version}",
-	"name": "NoBlurredBackgrounds",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "No Background Panorama",
+	"description": "Restores the look and feel of the GUI pre 24w09a",
 	"authors": [
-		"Me!"
+		"DerpDerpling"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/mod/no-panorama-backgrounds",
+		"sources": "https://github.com/DerpDerpling/NoPanoramaBackgrounds"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/nbb/icon.png",
+	"icon": "assets/nbp/icon.png",
 	"environment": "*",
 	"entrypoints": {
-		"main": [
-			"derp.nbb.ExampleMod"
-		],
 		"client": [
-			"derp.nbb.ExampleModClient"
+			"derp.nbp.NoBackgroundPanoramaClient"
 		]
 	},
 	"mixins": [
-		"nbb.mixins.json",
 		{
-			"config": "nbb.client.mixins.json",
+			"config": "nbp.client.mixins.json",
 			"environment": "client"
 		}
 	],
 	"depends": {
 		"fabricloader": ">=0.15.7",
-		"minecraft": "~1.20.4",
-		"java": ">=17",
+		"minecraft": ">=1.20.5-",
 		"fabric-api": "*"
-	},
-	"suggests": {
-		"another-mod": "*"
 	}
 }
